@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.13.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OutstandingFacilitySubReport" pageWidth="595" pageHeight="842" columnWidth="575" leftMargin="0" rightMargin="20" topMargin="0" bottomMargin="0" uuid="877499a1-e4e5-4022-962a-298001a8cfa9">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="outstandingFacility" class="java.lang.String"/>
+	<field name="security" class="java.lang.String"/>
+	<field name="expiryDateString" class="java.lang.String"/>
+	<field name="loanAmount" class="java.lang.Double"/>
+	<field name="outstandingBalance" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="23">
+			<staticText>
+				<reportElement x="0" y="0" width="337" height="20" uuid="f00d4700-69ed-48f7-8b20-f8624b7d6b6f"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[OUTSTANDING FACILITIES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="151" height="20" uuid="4e20bdd7-62ab-4f63-8667-4879a28c257b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8774851f-7d54-4145-9bad-8ad3b6aa224c"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Outstanding Facility]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="144" height="20" uuid="14326a0d-a4b3-4929-8c6d-9d0996ab2d37">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="79011a8e-6c2b-4154-9589-2ad9b1619039"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[security]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="80" height="20" uuid="ff87b9fd-d29f-4da5-aac4-73a06f05e1d9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2adedb0-9777-485b-b175-b97c9c736ab7"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Expiry Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="0" width="79" height="20" uuid="52903b68-1567-4a49-8f50-d467e6edbae4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1013aab7-cdd0-40bb-99cf-c54eb68ea95d"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Loan Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="0" width="80" height="20" uuid="2d522c8a-940a-455a-af32-084424e0f3be">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="129acd96-1cbe-4fce-94e2-bafb090f9d7a"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Outstanding]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="151" height="20" uuid="fef01f90-26cc-4590-b094-2aa37b297066">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8774851f-7d54-4145-9bad-8ad3b6aa224c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{outstandingFacility}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="145" height="20" uuid="f1382a39-bb24-405f-9afa-318e9ec9074a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="79011a8e-6c2b-4154-9589-2ad9b1619039"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{security}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="80" height="20" uuid="aa01aada-c13c-4b6d-8994-941b0299a3ed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2adedb0-9777-485b-b175-b97c9c736ab7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{expiryDateString}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="0" width="79" height="20" uuid="6e64fad0-9e17-4371-bd98-e1bc38ce288d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1013aab7-cdd0-40bb-99cf-c54eb68ea95d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{loanAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="80" height="20" uuid="7525a079-8b38-4b9a-9e9a-41903185ced8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="129acd96-1cbe-4fce-94e2-bafb090f9d7a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{outstandingBalance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

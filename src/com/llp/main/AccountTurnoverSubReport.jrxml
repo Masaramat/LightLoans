@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.13.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AccountTurnoverSubReport" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="59949f76-ce40-4c46-bd1c-200556a2a5dc">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="debitTurnover" class="java.lang.Double"/>
+	<field name="creditTurnover" class="java.lang.Double"/>
+	<field name="monthEndBalance" class="java.lang.Double"/>
+	<field name="income" class="java.lang.Double"/>
+	<field name="month" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="371" height="20" uuid="d9851755-f373-4e06-a6aa-851506f497a0"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACCOUNT TURNOVER FOR THE PAST THREE MONTHS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="0" width="110" height="20" uuid="40eb523a-3280-4261-830f-81bd1052e685">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46165a0e-c844-453d-a846-1bdfd787ce31"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Credit Turnover]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="121" height="20" uuid="968320af-175b-4596-8616-2e5a4b33fb35">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e1be4c2-fefd-48fd-a990-228bd8a7a6f1"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Month End Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="0" width="104" height="20" uuid="8ea9aab9-e175-440a-86b2-beead1ea3bcc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9e18a84c-5fc2-4193-bf87-49c29bd98be3"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Income]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="90" height="20" uuid="a61ad00f-3678-4b49-b9f1-1fedb733d6ff">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb0487dc-a429-42d3-ac96-322abdf3df7d"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="110" height="20" uuid="8582ebd8-13a3-4497-947a-8f38edc6dcbb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="07fd2980-4c5f-4d62-aaf6-fe8ccd83500b"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Debit Turnover]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="0" width="110" height="20" uuid="3cee6c49-b633-4476-a25d-a2d5c90c655b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="07fd2980-4c5f-4d62-aaf6-fe8ccd83500b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{debitTurnover}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="110" height="20" uuid="ac040633-c281-4eed-a4d2-6da9bd4ebd34">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46165a0e-c844-453d-a846-1bdfd787ce31"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{creditTurnover}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="121" height="20" uuid="9982dd9c-fbd1-4c80-af93-b4a190b24a3c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e1be4c2-fefd-48fd-a990-228bd8a7a6f1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{monthEndBalance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="101" height="20" uuid="d93377f2-41bf-49b7-8e72-1109fdfe0434">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9e18a84c-5fc2-4193-bf87-49c29bd98be3"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{income}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="90" height="20" uuid="4f3fd61c-e521-477d-b799-2cb9ea4b4e1e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb0487dc-a429-42d3-ac96-322abdf3df7d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="4" splitType="Stretch"/>
+	</summary>
+</jasperReport>

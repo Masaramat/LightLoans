@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.3.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LetterHead" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8d8358b7-5836-408f-acf9-36df880c3a3f">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="146" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="-5" width="145" height="65" uuid="07a633f1-be7c-4e6f-a5e8-cba9d01675f0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{imageLogo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="166" y="6" width="399" height="30" forecolor="#8C5C14" uuid="e1e1cc51-94f2-4a7a-9ee3-ed5daa7c0981"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Black" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIGHT MICROFINANCE BANK LIMITED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="37" width="272" height="21" uuid="31fe80e7-66e3-43d1-95de-f2b8d2e344ea"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[...Lightening up lives economically and socially]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="61" width="147" height="20" uuid="c572496f-d49a-4d4e-b060-3ead3780dd1b"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[RC 1003801]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="76" width="170" height="20" forecolor="#C21815" uuid="a9d38b22-526c-4a66-9cb2-701037854268"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HEAD OFFICE: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="95" width="83" height="51" uuid="b85e336e-3af4-4d59-a7ae-b28bbba5255d"/>
+				<text><![CDATA[08123488886
+07089666326
+09026630111]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="75" width="83" height="20" forecolor="#C21815" uuid="457beb3a-32e4-4f72-b168-cb998d4ad140"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTACTS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="96" width="420" height="49" uuid="1899db8a-e899-436f-adff-bf4fae4c59e8"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Yakubu Gowon Way, 
+By Zarmaganda, Rayfield Junction, 
+Jos South, Plateau State.                            Email: lightmfbmails@lightmfb.com]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="15" width="541" height="31" uuid="2912126f-c96a-4fd0-9f04-a5da41ac308e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Directors: Mr. Bernard B. Poyi (Chairman), Mr. Danjuma Tat (Managing Director) 
+Mrs. Naomi A. Noma, Mr. Bulus Gwashi, Mr. Yakubu D. Dutse, Mr. Bako Malumbus, Mrs. Helen James Mshelia]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="15" width="560" height="1" uuid="1c73b241-3242-4584-ae68-7c5be9021117">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

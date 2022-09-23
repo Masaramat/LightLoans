@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.3.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RejectedLoansReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0fd76982-c5d5-414e-9f9a-045b3897f086">
+	<parameter name="fromdate" class="java.lang.String"/>
+	<parameter name="todate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="applicationID" class="java.lang.String"/>
+	<field name="rejectedBy" class="java.lang.String"/>
+	<field name="rejectionType" class="java.lang.String"/>
+	<field name="comment" class="java.lang.String"/>
+	<field name="rejectionDate" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="801" height="30" uuid="3c724b7a-5a7e-4c5e-9430-44b8450b3c5c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIGHT MICROFINANCE BANK LIMITED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="801" height="20" uuid="fec3616e-f944-4368-8742-cf47ba23fac9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Rejected Loans Report ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="60" width="80" height="20" uuid="ae5bcb29-b348-4ada-9a94-8ebe24a96b8f"/>
+				<textFieldExpression><![CDATA[$P{fromdate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="60" width="30" height="20" uuid="27c5dfe7-8dfb-4383-9daa-0af90fc12382"/>
+				<text><![CDATA[From: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="60" width="20" height="20" uuid="4f2d3c43-8473-49fe-a5e1-21add7b5cca1"/>
+				<text><![CDATA[To: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="60" width="79" height="20" uuid="df0fd8a0-c9e2-4d7b-8c39-1ea779b2d4c6"/>
+				<textFieldExpression><![CDATA[$P{todate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="590" y="60" width="40" height="20" uuid="4dd7d45e-5a5d-42fe-a07b-0c5bab3062a9"/>
+				<text><![CDATA[Printed: ]]></text>
+			</staticText>
+			<textField pattern="MMM dd, yyyy">
+				<reportElement x="630" y="60" width="110" height="20" uuid="4f18e7ea-da0c-433f-8448-7140dc21a9a6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h:mm a">
+				<reportElement x="740" y="60" width="61" height="20" uuid="881a3c0f-3bea-48d2-895e-c481b079e3fc"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="0" width="70" height="21" uuid="f1642d2b-32f4-4e1f-8d36-b101cf103984">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84453b0d-6f0c-4321-a4b4-078ad601700b"/>
+				</reportElement>
+				<text><![CDATA[Application ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="1" width="130" height="20" uuid="4b269193-82c4-4139-b587-97a114925215">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b82a58b-bdd7-4851-aa3e-f09d3f17059c"/>
+				</reportElement>
+				<text><![CDATA[Rejected By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="0" width="90" height="21" uuid="4d7367b2-affb-4416-808b-71aadbcf40bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="584d1922-8b4b-440b-ab48-c7a97333b247"/>
+				</reportElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="1" width="380" height="21" uuid="1dcb0a88-6a26-4038-ae00-9f37c0038675">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cff0bf01-f2ac-4a7c-abf5-4e4d3ac3fc1b"/>
+				</reportElement>
+				<text><![CDATA[comment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="1" width="80" height="22" uuid="9818fb1f-4406-4216-8c0c-8a9db990d4bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="761cd53d-9a16-415c-a880-4cca8a5227db"/>
+				</reportElement>
+				<text><![CDATA[Rejection Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="30" height="22" uuid="5bcca71d-11d8-49f4-ae8e-73f5f739acf1"/>
+				<text><![CDATA[SNo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="0" width="70" height="20" uuid="ca03ef8b-4fdb-4582-a4c0-9f3bd32ede34">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84453b0d-6f0c-4321-a4b4-078ad601700b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{applicationID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="100" y="0" width="380" height="20" uuid="64aa95d3-de1a-415b-92ed-1a3c82dd0b61">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cff0bf01-f2ac-4a7c-abf5-4e4d3ac3fc1b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{comment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="610" y="0" width="90" height="20" uuid="83dff9e2-f006-4cf4-962c-c4ed1877cdd3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="584d1922-8b4b-440b-ab48-c7a97333b247"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rejectionDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="80" height="20" uuid="18e6a409-6f9d-458a-a51c-8449e924ac66">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="761cd53d-9a16-415c-a880-4cca8a5227db"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rejectionType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="128" height="20" uuid="be105396-2946-4ff9-8473-3bf329f0a4d9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="178e5a1b-50cf-4651-9d0d-b24420a7ac57"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rejectedBy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="30" height="20" uuid="c47c3da0-f7ba-4e32-9797-a92739427045"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="30" height="21" uuid="935241ff-aef9-4427-b9a2-ed409ab554af"/>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="5" width="30" height="20" uuid="6ba3334e-aa85-49b5-80bf-66925fc9fcd9"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

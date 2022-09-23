@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.3.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LoanApplication" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81a370cc-e10f-4e1d-af6c-1dad9d7f4496">
+	<parameter name="fiveCList" class="java.util.List"/>
+	<parameter name="AnalysisSubReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="checklist" class="java.util.List"/>
+	<parameter name="checklistJasper" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="fiveCNote" class="java.lang.String"/>
+	<parameter name="repaymentType" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="address" class="java.lang.String"/>
+	<field name="branch" class="java.lang.String"/>
+	<field name="facilityApplied" class="java.lang.String"/>
+	<field name="applicationId" class="java.lang.String"/>
+	<field name="accountNumber" class="java.lang.String"/>
+	<field name="loanType" class="java.lang.String"/>
+	<field name="amountInWords" class="java.lang.String"/>
+	<field name="tenor" class="java.lang.String"/>
+	<field name="sourceOfRepayment" class="java.lang.String"/>
+	<field name="fullName" class="java.lang.String"/>
+	<field name="phone" class="java.lang.String"/>
+	<field name="BVN" class="java.lang.String"/>
+	<field name="bmGender" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="535" height="30" uuid="27abeb75-b97d-4140-8cd9-fd8634b9099c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Light Microfinace Bank Limited.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="50" width="535" height="21" uuid="40b1adf2-fd4c-48be-ab43-8079020d69b6"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Loan Application Form]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="520" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="380" y="10" width="165" height="20" uuid="a1f8021f-3190-4d59-be56-2cefaf7e3c63"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM, yyyy">
+				<reportElement x="380" y="40" width="165" height="20" uuid="be2ec8d0-7d4b-42f8-9ffb-aa0090aced6c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="70" width="171" height="20" uuid="e5245937-3caa-4ce7-bf14-44ed10b6c7f9"/>
+				<text><![CDATA[The Manager, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="90" width="171" height="20" uuid="e8a61f33-160a-4acf-9c01-716aa5965489"/>
+				<text><![CDATA[Light Microfinance Bank Limited]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="110" width="171" height="20" uuid="7a968938-6b85-41a9-a16f-176adb7cae97"/>
+				<textFieldExpression><![CDATA[$F{branch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="170" width="270" height="19" uuid="82008959-b6d1-4e9a-aab9-c83c5bf2c257"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facilityApplied}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="200" width="370" height="21" uuid="71940ca4-80ed-4050-a2eb-1933778f1356"/>
+				<text><![CDATA[I/We hereby apply for a micro finance facility as specified below:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="251" width="120" height="21" uuid="240cde46-7f57-46eb-9356-d5a604c92b67"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LMFB Account No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="272" width="120" height="21" uuid="74c173d9-f14d-4144-88d7-49bca341bd11"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="293" width="120" height="21" uuid="1ec27487-efb7-409b-8970-49d70efe9ec8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount Requseted: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="314" width="120" height="21" uuid="72d4f95f-e96b-4112-ae0a-f5a8858d14f6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tenor: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="230" width="120" height="21" uuid="a4d58fdc-10d4-4d46-98a2-270a2de6a1d7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Application ID: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="335" width="120" height="21" uuid="e76865cb-3b87-49f6-9bc1-37ebdf7aabb4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sources of Repayment: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="383" width="120" height="21" uuid="80496445-373c-4b50-bafb-c6a35c8f6515"/>
+				<text><![CDATA[Thank You.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="412" width="120" height="21" uuid="3effce7a-be99-4d97-be2d-5b20f97c2e11"/>
+				<text><![CDATA[Yours Faithfully, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="433" width="120" height="21" uuid="b8a2cedb-24dc-4b82-a796-5a0eb1d72411"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="454" width="120" height="21" uuid="f2485b63-d6ea-4727-88ab-81600066ec2e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="496" width="120" height="21" uuid="5db3a7c0-bbe7-4807-b85c-359810e42f05"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sign:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="181" y="230" width="239" height="21" uuid="b1537c7b-7b7a-4975-9b7e-b6f9c51a094b"/>
+				<textFieldExpression><![CDATA[$F{applicationId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="251" width="240" height="20" uuid="911a9d8e-e5d2-4099-a6fc-06081438aff6"/>
+				<textFieldExpression><![CDATA[$F{accountNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="181" y="272" width="359" height="21" uuid="0b3c374f-8596-4ea5-853b-d0356de3fdc0"/>
+				<textFieldExpression><![CDATA[$F{loanType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="293" width="360" height="21" uuid="97465b2e-1889-42ac-83c3-291bef7ee65a"/>
+				<textFieldExpression><![CDATA[$F{amountInWords}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="314" width="200" height="21" uuid="1d005181-5ea6-4f0f-89a8-940771824e2f"/>
+				<textFieldExpression><![CDATA[$F{tenor}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="180" y="335" width="360" height="35" uuid="0de222a8-6c4c-4131-9d7e-0c31f373ef96"/>
+				<textFieldExpression><![CDATA[$F{sourceOfRepayment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="434" width="360" height="20" uuid="917249b7-d7de-49e6-9caf-d6356c57406c"/>
+				<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="181" y="454" width="99" height="21" uuid="c5808c86-2c40-4d59-9c3e-049086d2c0b7"/>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="181" y="475" width="100" height="21" uuid="1991a750-fa9b-45c5-b562-618d3a5cfd3a"/>
+				<textFieldExpression><![CDATA[$F{BVN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="496" width="191" height="21" uuid="e7f4e5c5-de2c-44fa-984e-e5a96bb01678"/>
+				<text><![CDATA[_______________________________]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="130" width="100" height="20" uuid="0bc989fd-dda0-42dd-b3cb-ffd1ab9af2d3"/>
+				<textFieldExpression><![CDATA[$F{bmGender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="475" width="120" height="21" uuid="33e81f6b-f98f-45ec-93d1-1e76d0b3fe73"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BVN: ]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="513" width="100" height="1" uuid="b4a674ff-63af-4e9d-a986-b74e88caafcf"/>
+			</break>
+		</band>
+		<band height="102">
+			<subreport>
+				<reportElement x="10" y="82" width="525" height="18" uuid="d8f9a653-c72e-48f7-bc97-9b47242fc73b"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{fiveCList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{AnalysisSubReport}]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="10" y="0" width="551" height="21" uuid="e77d291f-a170-4e37-ab49-1311a0971d41"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIGHT MICROFINANCE BANK LTD. MICRO LOAN ANALYSIS FORM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="21" width="89" height="20" uuid="52b1a3f3-0e24-407a-ada6-76680a1956b5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="99" y="21" width="441" height="20" uuid="b9ec7578-195a-415e-a585-8441c765f866"/>
+				<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="41" width="50" height="21" uuid="f11d9f4c-6344-49ef-8d7b-0081a3a232c3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="41" width="480" height="21" uuid="8be4fb87-4fde-446e-bb73-3efabbc88181"/>
+				<textFieldExpression><![CDATA[$F{loanType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="62" width="554" height="20" uuid="dc61ed8b-2fcc-4782-a554-66db738fa830"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5 C'S OF CREDIT CHECK]]></text>
+			</staticText>
+		</band>
+		<band height="53">
+			<subreport>
+				<reportElement x="10" y="25" width="517" height="25" uuid="2696f11b-49fa-428e-82b8-a9d2616ed323"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{checklist})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{checklistJasper}]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="10" y="5" width="542" height="20" uuid="8462c4e6-ca38-4987-9526-f113406bc483"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OTHER CHECKLIST ITEMS]]></text>
+			</staticText>
+		</band>
+		<band height="62">
+			<staticText>
+				<reportElement x="10" y="20" width="551" height="20" uuid="268a7c99-00a0-40be-9493-a5b0dfb9a1aa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECOMMENDATIONS BY A/O ON THE 5C'S OF THE CLIENT]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="10" y="40" width="540" height="18" uuid="931529a1-4d49-4fdc-80e4-219424ccafb7"/>
+				<textFieldExpression><![CDATA[$P{fiveCNote}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="160" height="20" uuid="c6d8b997-09ec-4de5-a1bf-7a9ba5733cf4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{repaymentType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="0" width="210" height="20" uuid="12b43b0b-bb13-4faa-ae59-87b66d0e2aac"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TYPE OF REPAYMENT FOR THE FACILITY:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="212" y="10" width="131" height="21" uuid="c9e7b32c-8ad6-4143-8849-8a5791372d8b"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="85">
+			<staticText>
+				<reportElement x="15" y="7" width="171" height="18" uuid="389fdc5d-a514-49f5-8bbd-06d990d6c317"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[APPROVAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="25" width="171" height="20" uuid="689b93ed-46ea-4837-9a25-2e52643eb44c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACCOUNT OFFICER SIGNATURE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="45" width="210" height="18" uuid="7154fd59-ab81-479e-99b0-d74669311e93"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUPERVISOR COMMENTS/SIGNATURE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="45" width="332" height="18" uuid="3bf37e6e-98ab-4e5f-8860-f50ebfa077ee"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[_______________________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="25" width="299" height="20" uuid="7f0bc218-0c5b-407e-9867-6583384fbc68"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[___________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="63" width="542" height="22" uuid="fe9afcf1-d7e7-4ca8-b0f5-b2f4cfa2e068"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[___________________________________________________________________________________________________________________________________________________]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

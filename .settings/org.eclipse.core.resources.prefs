@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//src/com/llp/main/AccountTurnoverSubReport.jrxml=UTF-8
+encoding//src/com/llp/main/AnalysisSubReport.jrxml=UTF-8
+encoding//src/com/llp/main/ApprovalDisbursementForm.jrxml=UTF-8
+encoding//src/com/llp/main/DocumentationSubReport.jrxml=UTF-8
+encoding//src/com/llp/main/LetterHead.jrxml=UTF-8
+encoding//src/com/llp/main/LoanApplication.jrxml=UTF-8
+encoding//src/com/llp/main/OfferLetter.jrxml=UTF-8
+encoding//src/com/llp/main/OutstandingFacilitySubReport.jrxml=UTF-8
+encoding//src/com/llp/main/RACSubReport.jrxml=UTF-8
+encoding//src/com/llp/main/checklistJasper.jrxml=UTF-8
+encoding//src/com/llp/main/securitiesReport.jrxml=UTF-8
+encoding//src/com/llp/reports/LoanApplicationReport.jrxml=UTF-8
+encoding//src/com/llp/reports/LoanAuditReport.jrxml=UTF-8
+encoding//src/com/llp/reports/LoanDisbursementReport.jrxml=UTF-8
+encoding//src/com/llp/reports/LoanOffersReport.jrxml=UTF-8
+encoding//src/com/llp/reports/RejectedLoansReport.jrxml=UTF-8

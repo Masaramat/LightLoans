@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.3.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="checklistJasper" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="7fcd8341-3a63-4a91-a5dc-023fafb4d494">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="parameter" class="java.lang.String"/>
+	<field name="value" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="340" height="20" uuid="53e1ae28-5974-4215-b2a8-81540c9ce7dd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="87059662-7c49-4f4c-b90b-35d66ddce85a"/>
+				</reportElement>
+				<text><![CDATA[parameter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="90" height="20" uuid="3da9ea9f-c83f-47d0-99a3-cc9243405133">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46480f2c-a300-4fcd-bf73-52592cd1147f"/>
+				</reportElement>
+				<text><![CDATA[value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="0" width="20" height="21" uuid="6bdec8eb-7134-44a5-8e0a-47ed28c18eb8"/>
+				<text><![CDATA[S/No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="340" height="20" uuid="217d6c6a-fe4c-4d15-99c8-0c22739ada60">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="87059662-7c49-4f4c-b90b-35d66ddce85a"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+					<paragraph lineSpacingSize="0.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{parameter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="90" height="20" uuid="d1828108-debd-4f6e-989f-e060f942e565">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46480f2c-a300-4fcd-bf73-52592cd1147f"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+					<paragraph lineSpacingSize="0.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="0" width="20" height="20" uuid="c1ec47db-010e-48c0-b54d-30d1c192e123"/>
+				<textElement>
+					<font size="10"/>
+					<paragraph lineSpacingSize="0.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.3.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DocumentationSubReport" pageWidth="595" pageHeight="842" columnWidth="575" leftMargin="0" rightMargin="20" topMargin="0" bottomMargin="0" uuid="bf47cb82-6461-4fad-94a8-2e14efd83934">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="parameter" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="remark" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="391" height="20" uuid="1c98a1f5-9704-49df-afcc-66606ac66eb4"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOCUMENTATION CHECKLIST]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="30" height="21" uuid="f7f32484-2786-43fc-b14d-c86dd7d9bace"/>
+				<text><![CDATA[SN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="370" height="22" uuid="9ce238c2-20ed-4a13-8e50-911effd403a6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="75e64409-ad51-40b9-bcca-a78189e262ff"/>
+				</reportElement>
+				<text><![CDATA[Parameter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="1" width="60" height="22" uuid="6ec03c38-986c-48ca-901e-a4057079761c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="79c5aac6-facb-46cc-add8-43dee50010a7"/>
+				</reportElement>
+				<text><![CDATA[Available]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="104" height="22" uuid="c8a9cec0-1e0a-487f-b45c-8a70c5091302">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d1035390-7043-41e9-9cbf-1c28d51d797c"/>
+				</reportElement>
+				<text><![CDATA[Remark]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="30" height="15" uuid="10100439-a901-44db-8c2a-25d0210ba1af">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+					<paragraph lineSpacingSize="0.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="370" height="15" uuid="8a923e86-8a1b-486b-a1c0-76d5fa267374">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="75e64409-ad51-40b9-bcca-a78189e262ff"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+					<paragraph lineSpacingSize="0.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{parameter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="1" width="60" height="15" uuid="0f6420d7-329e-41e3-a788-65ff7d711bea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="79c5aac6-facb-46cc-add8-43dee50010a7"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+					<paragraph lineSpacingSize="0.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="460" y="0" width="104" height="15" uuid="1539f790-fe29-4b24-89f5-0b20988156f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d1035390-7043-41e9-9cbf-1c28d51d797c"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+					<paragraph lineSpacingSize="0.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{remark}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="4" splitType="Stretch"/>
+	</summary>
+</jasperReport>

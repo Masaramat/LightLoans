@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.13.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LoanAuditReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4281a92d-27c2-4f6c-876c-3a3b3eb301da">
+	<parameter name="fromdate" class="java.lang.String"/>
+	<parameter name="todate" class="java.lang.String"/>
+	<parameter name="totalLoanFacility" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="applicationStatus" class="java.lang.String"/>
+	<field name="accountNo" class="java.lang.String"/>
+	<field name="applicationId" class="java.lang.String"/>
+	<field name="applicationDate" class="java.lang.String"/>
+	<field name="branch" class="java.lang.String"/>
+	<field name="facilityApproved" class="java.lang.String"/>
+	<field name="tenor" class="java.lang.String"/>
+	<field name="maturity" class="java.lang.String"/>
+	<field name="auditedBy" class="java.lang.String"/>
+	<field name="auditDate" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="801" height="30" uuid="1ce9a7a9-32db-4754-904a-d1009b622390"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIGHT MICROFINANCE BANK LIMITED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="801" height="30" uuid="78172b56-2575-41d5-be79-cdc152691a4d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Loan Audit Report ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="60" width="30" height="20" uuid="e3569d4f-ee41-4fe3-8312-cae3d6972287"/>
+				<text><![CDATA[From: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="60" width="80" height="20" uuid="bdd68d83-b983-4175-803e-0850bc463377"/>
+				<textFieldExpression><![CDATA[$P{fromdate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="60" width="20" height="20" uuid="8610b09e-e413-4f86-ac4c-6fae4399800a"/>
+				<text><![CDATA[To: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="60" width="79" height="20" uuid="6295a1e9-361f-42cd-a881-39e39ba4410b"/>
+				<textFieldExpression><![CDATA[$P{todate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="600" y="60" width="40" height="20" uuid="ec4cf5f7-3ceb-4743-a9a2-e72dbcc7178a"/>
+				<text><![CDATA[Printed: ]]></text>
+			</staticText>
+			<textField pattern="MMM dd, yyyy">
+				<reportElement x="640" y="60" width="100" height="20" uuid="ac57b5f5-a255-4418-884b-7bbdd82b0755"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h:mm a">
+				<reportElement x="740" y="60" width="61" height="20" uuid="f9c6796e-f963-482e-bc4b-f9b6aea16184"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="0" width="80" height="20" uuid="ca87c799-a430-482a-b604-12134091124d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbfa29a1-cbce-40ed-8c97-a79f4465df72"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Application ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="90" height="20" uuid="7abbf6cd-51e3-4b43-a479-26023871875a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df0688a4-bd39-4078-85f1-0248060d01db"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Account No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="80" height="20" uuid="0c93b569-a40a-4a93-9ec5-d01545cb8766">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c28ece8-7718-41c6-b978-59a911f889b5"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Loan Facility]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="60" height="20" uuid="b8db4faf-85ce-443c-9498-09017dcfe1d9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="228031aa-8e2a-4b1b-ad3f-bdb5c223c2df"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Tenor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="530" y="0" width="70" height="20" uuid="cbf112ae-77cc-46aa-ad21-510bc95303f3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ab1b606e-2a32-4d36-8486-ada0290ed409"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Maturity Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="80" height="20" uuid="9de48360-aa32-4efb-8d99-d0c9ae8366f9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1b287e39-0e85-42fa-9b83-0a21d3200904"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Application Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="60" height="20" uuid="a270de5e-91d8-4911-a32a-46cc21af7940">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a9ec75c-a9e1-4020-be50-f7490041e66b"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Audit Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="0" width="80" height="20" uuid="46fce614-3df0-400e-ab36-7535c421de17">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a7a4e57a-d891-4a13-a075-841426fdf45d"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Audited By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="740" y="0" width="60" height="20" uuid="b3398779-4fe0-467c-b69a-7ed78be93cd8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f6df740-973f-49af-8b9f-379d9de489ae"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="90" height="20" uuid="7d8c25fe-c08b-48d9-bddc-f5206ed0c2af">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef34e5d6-d087-4356-b5e5-0919de8ea6aa"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Application Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="40" height="20" uuid="77a405a4-a418-481f-a551-8bacc90044aa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f6df740-973f-49af-8b9f-379d9de489ae"/>
+				</reportElement>
+				<textElement>
+					<font size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[S/No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="40" height="20" uuid="0034db17-e1c6-4129-b698-9686a03454e4"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="80" height="20" uuid="262ca0b2-48a8-4e19-b1b2-c96bd4a46b62">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbfa29a1-cbce-40ed-8c97-a79f4465df72"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{applicationId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="90" height="20" uuid="1b0d2193-a189-4f04-abb8-cc6597ddd022">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df0688a4-bd39-4078-85f1-0248060d01db"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accountNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="80" height="20" uuid="604ef9bc-b583-4831-9d7d-fca6ef6bf9b4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1b287e39-0e85-42fa-9b83-0a21d3200904"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{applicationDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="60" height="20" uuid="3fbd47c9-9288-4727-b0f6-27d619ce4054">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="228031aa-8e2a-4b1b-ad3f-bdb5c223c2df"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tenor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="530" y="0" width="70" height="20" uuid="d0ec6922-b21c-416c-a490-02b0a53f3bea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ab1b606e-2a32-4d36-8486-ada0290ed409"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maturity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="60" height="20" uuid="170e1d30-98de-45fd-a596-8e8c2083f9f2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a9ec75c-a9e1-4020-be50-f7490041e66b"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{auditDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="660" y="0" width="80" height="20" uuid="d0f225e9-2b8d-4e98-9a7c-8f678c01c401">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a7a4e57a-d891-4a13-a075-841426fdf45d"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{auditedBy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="740" y="0" width="61" height="20" uuid="f0365895-6b77-4dad-ad2b-9a041dbd62dc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f6df740-973f-49af-8b9f-379d9de489ae"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{branch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="80" height="20" uuid="1f3b75f8-ace6-43eb-aa34-69299ef798a8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a31a17d6-0101-4016-8585-97d4006eebcc"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facilityApproved}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="90" height="20" uuid="4363e8e0-1b58-447b-8dd0-98478cfaf47e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef34e5d6-d087-4356-b5e5-0919de8ea6aa"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{applicationStatus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="14" width="40" height="20" uuid="7c0f4171-b3e2-4875-ae3c-8ff02cd1a5c8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="14" width="40" height="20" forecolor="#2D3EC2" uuid="1de9a5e9-0d6c-4f70-8b46-cc7152bfd07d"/>
+				<textElement textAlignment="Left">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="14" width="80" height="20" forecolor="#2D3EC2" uuid="c2dfd381-bf7a-4326-91c1-7218163cf706"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalLoanFacility}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

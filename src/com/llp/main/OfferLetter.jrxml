@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.3.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OfferLetter" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="40" bottomMargin="20" uuid="9e4ece0e-635f-4adf-aa95-7ec80d5e4748">
+	<parameter name="securityJasper" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="securityList" class="java.util.List"/>
+	<parameter name="imageLogo" class="java.awt.Image"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="referenceNo" class="java.lang.String"/>
+	<field name="fullName" class="java.lang.String"/>
+	<field name="principalIntroduction" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="loanProduct" class="java.lang.String"/>
+	<field name="accountNo" class="java.lang.String"/>
+	<field name="business" class="java.lang.String"/>
+	<field name="facilityApplied" class="java.lang.String"/>
+	<field name="facilityApproved" class="java.lang.String"/>
+	<field name="purpose" class="java.lang.String"/>
+	<field name="pricingInterest" class="java.lang.String"/>
+	<field name="pricingMonFee" class="java.lang.String"/>
+	<field name="pricingRiskPremium" class="java.lang.String"/>
+	<field name="pricingMgtFee" class="java.lang.String"/>
+	<field name="defaultPenalty" class="java.lang.String"/>
+	<field name="tenor" class="java.lang.String"/>
+	<field name="maturityDate" class="java.lang.String"/>
+	<field name="repaymentSource" class="java.lang.String"/>
+	<field name="termlyRepaymentHeader" class="java.lang.String"/>
+	<field name="fullRepaymentHeader" class="java.lang.String"/>
+	<field name="principal" class="java.lang.String"/>
+	<field name="totalInterestCharges" class="java.lang.String"/>
+	<field name="totalCompulsorySavings" class="java.lang.String"/>
+	<field name="totalRepayment" class="java.lang.String"/>
+	<field name="installmentPrincipal" class="java.lang.String"/>
+	<field name="installmentInterestCharges" class="java.lang.String"/>
+	<field name="installmentCompulsorySavings" class="java.lang.String"/>
+	<field name="totalInstallmentRepayment" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92"/>
+	</title>
+	<detail>
+		<band height="586" splitType="Stretch">
+			<textField pattern="dd MMMMM, yyyy">
+				<reportElement x="21" y="62" width="136" height="20" uuid="e32a0fab-84f3-40b9-83ae-14d3567d4d2d"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="42" width="259" height="20" uuid="72306e6b-1a85-4cd2-b551-4c1b1d2b91c5"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{referenceNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="102" width="195" height="30" uuid="1886a19b-f9b8-4ca3-be53-32dc19f95886"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="82" width="309" height="20" uuid="0f37f12f-c9d1-4015-ac7b-2c9afbfe37e9"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="152" width="191" height="20" uuid="fd128c34-b162-45e9-8b48-b5e4db979830"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OFFER OF BANKING FACILTY]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="172" width="525" height="40" uuid="0c81c390-2ec7-414b-ad93-dd26b8da5bb3"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{principalIntroduction}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="212" width="121" height="21" uuid="610b9ddc-ca7f-4de8-99a3-7d0d79a85c4c"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lender:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="233" width="121" height="21" uuid="006c65aa-054c-47ab-a07f-b91584a4f0d2"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Obligor:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="212" width="334" height="21" uuid="85da1119-c928-43e3-8ba9-9bc5340ad509"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[Light Microfinance Bank Limited ("LMFB" or the Bank)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="233" width="334" height="21" uuid="7e67bc34-3d3f-4069-81f3-e3ad3ee5c54b"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="254" width="121" height="21" uuid="acf4cd67-a2c2-447f-ab61-a0e68ca3c9b4"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loan Product:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="275" width="121" height="21" uuid="8d33c0c6-2c90-4c5a-ad14-cd883f269fde"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="296" width="121" height="21" uuid="41a79691-3900-4056-a234-d0b90e4cb084"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="254" width="334" height="21" uuid="ebe86563-4818-4c45-8495-c2b2bd9ec5f2"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{loanProduct}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="275" width="334" height="21" uuid="30724ba2-fe9f-4178-94c9-78a97855c1fd"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accountNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="296" width="407" height="21" uuid="4095516a-6703-4e51-b83e-67a9c137e82d"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{business}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="317" width="121" height="21" uuid="d7c82093-9fc5-4691-891a-1f4ef69ad743"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Facility Applied:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="338" width="121" height="21" uuid="6184b04e-1461-48e4-85a6-f41ee31c1e9c"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount Approved:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="359" width="121" height="21" uuid="25c9cd38-f0f1-4b72-8fec-9f7e233af78d"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Purpose:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="380" width="121" height="21" uuid="3f1fae36-4de3-4ffd-9c23-9f4b7df0d910"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pricing:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="317" width="334" height="21" uuid="fe56069f-2ae8-461a-8e36-7b0cdec1a6c0"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facilityApplied}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="338" width="335" height="21" uuid="6e03970b-499c-44c9-a1ae-24bebfea598f"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facilityApproved}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="359" width="404" height="21" uuid="fdc37ffe-e03d-4da2-b8a6-1db6c0025ba8"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purpose}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="380" width="402" height="21" uuid="968d1181-e4a4-4cc7-9c85-51d1c5b0c2ba"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pricingInterest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="401" width="402" height="21" uuid="d36c9595-3c88-4669-beef-43497c717344"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pricingMonFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="422" width="401" height="20" uuid="c4e498a9-b517-49cb-b2f9-80e209e1053e"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pricingRiskPremium}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="442" width="402" height="20" uuid="4d597919-892a-404a-bc3d-17f304670e4b"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{defaultPenalty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="462" width="402" height="20" uuid="1b770a4f-c918-4651-a390-cd81af24f922"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pricingMgtFee}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="492" width="123" height="21" uuid="c157a024-11d4-4e12-9ecd-9a365a4d59cf"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tenor:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="492" width="333" height="21" uuid="bbe7f956-4e0c-4c43-9321-df631e11aab8"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tenor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="513" width="122" height="21" uuid="375fd2b4-f87a-4375-b3ea-1249b9149e7e"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Maturity: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="534" width="123" height="21" uuid="12f9a6fc-1627-46e4-b17d-8bf9f73c3c79"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Repayment/Source:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="513" width="333" height="21" uuid="bb1c6175-f834-455c-a05b-e1ecd9c17f81"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maturityDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="534" width="402" height="46" uuid="56e031c6-f366-4045-9e90-7a3255e8a6f5"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{repaymentSource}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="132" width="190" height="19" uuid="172641f0-3e72-4199-a14c-3575dfce59b1"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="558" width="281" height="1" uuid="83f5cec7-aca9-4bf7-9a58-9d5bfeed9d0c"/>
+			</break>
+		</band>
+		<band height="33">
+			<subreport>
+				<reportElement x="31" y="0" width="516" height="27" uuid="cd0d93a8-6b8f-49c5-b625-cc19635cd875"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{securityList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{securityJasper}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="704">
+			<staticText>
+				<reportElement x="31" y="0" width="460" height="20" uuid="47b20203-5d2f-4bd5-ab5d-d96a73d52e6e"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[CONDITIONS PRECEDENT TO DRAWDOWN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="20" width="460" height="20" uuid="fbf7f74c-4e01-47c7-8ea1-d87ff80bab44"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[1. Receipt of duly excuted copy of LMFB offer letter.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="40" width="460" height="20" uuid="cf895099-111f-4466-a1d1-8c56e8cfdc5a"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[2. Receipt of duly executed loan documents (letter of indemnity and guarantee)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="71" width="460" height="20" uuid="5f008e3b-6466-45fe-9672-3bd69786ed56"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[OTHER CONDITIONS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="91" width="513" height="49" uuid="a6cd1f78-9c11-49af-bfff-b73d90057348"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[All out-of-pocket expenses including registration and legal fees, transportation, stamp duties, taxes (if any) and other fees, incured by the bank in the processing of this facility, perfection and enforcement of security and recovery of the facility in the event of default will be from your account.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="150" width="200" height="20" uuid="c5ab3e3c-3066-445a-a143-05944166f01e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[AMOUNT REPAYABLE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="170" width="168" height="20" uuid="26e05c4c-ef7d-4b9c-885e-82069bf244d1"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{termlyRepaymentHeader}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="170" width="160" height="20" uuid="ebf5177b-cbdc-4b2f-b37b-f47f23b47d6a"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fullRepaymentHeader}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="190" width="110" height="21" uuid="56114e27-9d59-481d-a1d6-6baadf4e0a04"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Principal: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="211" width="110" height="19" uuid="7dbf9352-66ae-4409-ad1c-ce2d938a1835"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interest Charges: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="230" width="110" height="20" uuid="a221eb22-fa30-49b3-b2f1-31d3d5280032"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Compulsory Savings: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="250" width="110" height="20" uuid="fea4e231-993b-4e72-b737-941f66db5148"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="190" width="160" height="21" uuid="0be4ffee-045a-47e0-b974-d0f1a6ad69f1"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{installmentPrincipal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="190" width="158" height="21" uuid="95a00d5b-515c-40f1-b092-ec572fa693d2"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{principal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="211" width="160" height="19" uuid="86a1fe13-fc74-44bf-b16a-65e3ffe762ca"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{installmentInterestCharges}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="211" width="158" height="19" uuid="a617d217-4a5b-403c-994b-8baee081c989"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalInterestCharges}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="230" width="160" height="20" uuid="1bc73240-6c9e-4c68-a36d-ec1c43c97a04"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{installmentCompulsorySavings}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="230" width="158" height="20" uuid="55194bba-d355-4bf0-886f-f39db704bc1b"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalCompulsorySavings}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="250" width="161" height="20" uuid="b159d023-7b16-475b-be04-3764781622d9"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalInstallmentRepayment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="250" width="158" height="20" uuid="b23eff41-ee10-4a6f-afdd-3ab2fddec5cd"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalRepayment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="291" width="514" height="349" uuid="969514c8-41f6-438c-9187-ebf1a8202d05"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[By signing this offer letter/loan agreement and by drawing on the loan, I covenant to repay the loan as and when due. In the event that I fail to repay the loan as agreed, and the loan becomes delinquent, the bank shall have the right to report the delinquent loan to the CBN through the Credit Risk management System (CRMS) or by any other means, and request the CBN exercise its regulatory power to direct all banks and other financial institutions under its regulatory purview to set-off my indebtedness from any money standing to my credit in any bank account and from any other financial assets they may be holding for my benefits.
+
+I covenant and warrant that the bank shall have power to set-off my indebtedness under this loan agreement from all such monies and funds standing to my credit /benefit in any and all such accounts or from any other financial assets belonging to me and in the custody of any such bank. 
+
+I hereby waive any right of confidentiality whether arising under common law or statute or in any other manner whatsoever and irrevocably agree that I shall not argue to the contrary before any court of law, tribunal, administrative authority or any other body acting in any judicial or quasi-judicial capacity. 
+
+The loan shall be utilized for the approved business/purpose. During the tenure of the facility, officers of the Bank shall have the power to evaluate and monitor the investment. If at any time any breach is observed, the bank shall be entitled to forthwith recover its investment by all legal means. All expenses incurred in the process of the recovery of the money shall be added on the amount repayable by you. Kindly note that the facility shall run at our default rate of 20% above subsisting interest rate if the facility expires and remains unpaid. . 
+
+
+Please, indicate acceptance of this offer within three (3) days by signing as indicated across a =N=50 stamp on the original and attached copies of this letter.
+
+Yours Faithfully,
+For: Light Microfinance Bank Limited.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="650" width="160" height="20" uuid="7b45ca08-f02d-47f4-9126-a5601362db30"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Authorized Signatory.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="650" width="160" height="20" uuid="1cee9f8b-f270-4bb5-a138-a3b2d22b8680"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Authorized Signatory.]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="280" width="351" height="1" uuid="a269d9cc-f1bc-4d41-87f3-dfc6ea9d6729"/>
+			</break>
+		</band>
+		<band height="281">
+			<staticText>
+				<reportElement x="31" y="29" width="241" height="21" uuid="0ca5a14f-6187-4452-ba8f-872b42e44d5f"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[FACILITY ACCEPTANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="50" width="513" height="31" uuid="96b5e0a7-3a0c-4242-a948-e8e400089381"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[I/We hereby confirm acceptance of the facility on the terms and conditions contained in this letter of offer and undertake to fund my/our account on monthly basis on or before the due date of each repayment installment.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="91" width="182" height="21" uuid="9e713755-afff-4479-bda8-0163ab1de7d6"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer’s Name/Signature: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="120" width="130" height="21" uuid="01b865b5-5c04-4145-95bc-9c01c7576810"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account No.: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="140" width="129" height="21" uuid="23254d7d-2775-4233-a1ab-1381a133d421"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="161" width="126" height="19" uuid="533ee794-608d-4290-b025-8a0783d37627"/>
+				<textElement>
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date: ]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<printWhenExpression><![CDATA[new Boolean( $V{PAGE_NUMBER}.intValue() == 1 )]]></printWhenExpression>
+			<break>
+				<reportElement x="0" y="38" width="100" height="1" uuid="1a46b04b-d2f1-4dff-b462-e3cd8f034c8c"/>
+			</break>
+		</band>
+	</pageFooter>
+</jasperReport>
