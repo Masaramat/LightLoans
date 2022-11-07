@@ -595,7 +595,7 @@ public class LoanApplicationFrame extends JFrame {
 						    	loan_application.setFacilityRecommendedInWords(recommendedAmountArea.getText());
 						    	loan_application.setComment(commentArea.getText());
 						    	
-						    	if(user.getBranch().equalsIgnoreCase("COCIN Headqaurters") || user.getBranch().equalsIgnoreCase("Gindiri") && Double.parseDouble(recommendedAmountField.getText())>100000) {
+						    	if(user.getBranch().equalsIgnoreCase("COCIN Headqaurters") || user.getBranch().equalsIgnoreCase("Gindiri") && Double.parseDouble(recommendedAmountField.getText())>300000) {
 						    		loan_application.setClearance(2);
 								}else if(user.getBranch().equalsIgnoreCase("Head Office") && Double.parseDouble(recommendedAmountField.getText())>300000) {
 									loan_application.setClearance(2);
@@ -744,7 +744,7 @@ public class LoanApplicationFrame extends JFrame {
 							loan_app.setApplicationStatus("pending");
 							loan_app.setCustomerId(customer_id);
 							
-							if(user.getBranch().equalsIgnoreCase("COCIN Headqaurters") || user.getBranch().equalsIgnoreCase("Gindiri") && Double.parseDouble(recommendedAmountField.getText())>100000) {
+							if(user.getBranch().equalsIgnoreCase("COCIN Headqaurters") || user.getBranch().equalsIgnoreCase("Gindiri") && Double.parseDouble(recommendedAmountField.getText())>300000) {
 								loan_app.setClearance(2);
 							}else if(user.getBranch().equalsIgnoreCase("Head Office") && Double.parseDouble(recommendedAmountField.getText())>300000) {
 								loan_app.setClearance(2);
@@ -1446,7 +1446,7 @@ public class LoanApplicationFrame extends JFrame {
 			LoanApplication app = new LoanApplication();
 			app.setApplicationId(application_id);
 			
-			if(user.getBranch().equalsIgnoreCase("COCIN Headqaurters") || user.getBranch().equalsIgnoreCase("Gindiri") && Double.parseDouble(recommendedAmountField.getText())>100000) {
+			if(user.getBranch().equalsIgnoreCase("COCIN Headqaurters") || user.getBranch().equalsIgnoreCase("Gindiri") && Double.parseDouble(recommendedAmountField.getText())>300000) {
 				app.setClearance(2);
 			}else if(user.getBranch().equalsIgnoreCase("Head Office") && Double.parseDouble(recommendedAmountField.getText())>300000) {
 				app.setClearance(2);
